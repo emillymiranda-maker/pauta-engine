@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Referências do workflow — Pauta Engine</title><style>
+:root{--bg:#0b0b0c;--panel:#141416;--panel2:#1a1a1d;--line:#2a2a2f;
+ --red:#c0392b;--red-soft:#e05a4a;--txt:#f2f2f3;--dim:#8b8b93}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.65;
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+ -webkit-font-smoothing:antialiased}
+.nav{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.92);
+ backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{max-width:1000px;margin:0 auto;padding:14px 28px;display:flex;flex-wrap:wrap;
+ gap:6px;align-items:center}
+.navin .brand{font-weight:700;font-size:14px;margin-right:14px;white-space:nowrap}
+.navin a{color:var(--dim);text-decoration:none;font-size:13.5px;padding:6px 11px;
+ border-radius:8px;white-space:nowrap}
+.navin a:hover{color:var(--txt);background:var(--panel2)}
+.navin a.on{color:var(--txt);background:var(--panel2);border:1px solid var(--line)}
+.wrap{max-width:1000px;margin:0 auto;padding:44px 28px 90px}
+.eyebrow{color:var(--red-soft);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+ font-weight:700;margin:0 0 12px}
+h1{font-size:clamp(28px,4.6vw,42px);line-height:1.12;letter-spacing:-.02em;margin:0 0 26px}
+h2{font-size:23px;letter-spacing:-.01em;margin:52px 0 14px;padding-top:22px;
+ border-top:1px solid var(--line)}
+h3{font-size:17.5px;margin:34px 0 10px;color:var(--txt)}
+h4{font-size:15px;margin:24px 0 8px;color:var(--red-soft)}
+p{margin:0 0 16px}
+a{color:var(--red-soft)}
+strong{color:#fff}
+ul,ol{margin:0 0 18px;padding-left:22px}
+li{margin-bottom:7px}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0}
+blockquote{margin:22px 0;padding:16px 20px;background:var(--panel);
+ border-left:3px solid var(--red);border-radius:0 12px 12px 0;color:#c9c9d1}
+blockquote p:last-child{margin-bottom:0}
+code{background:var(--panel2);border:1px solid var(--line);border-radius:6px;
+ padding:2px 6px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+ color:#e8b4ad}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+ padding:18px 20px;overflow-x:auto;margin:0 0 20px}
+pre code{background:none;border:0;padding:0;color:#c9c9d1;font-size:12.5px;line-height:1.6}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:0 0 24px;display:block;
+ overflow-x:auto}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);
+ vertical-align:top}
+th{color:var(--red-soft);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+ font-weight:700;white-space:nowrap}
+tbody tr:hover{background:var(--panel)}
+.foot{max-width:1000px;margin:0 auto;padding:0 28px 70px}
+.foot a{display:inline-block;border:1px solid var(--line);background:var(--panel2);
+ border-radius:10px;padding:11px 18px;text-decoration:none;color:var(--txt);font-size:14px}
+.foot a:hover{border-color:var(--red)}
+@media(max-width:640px){.wrap{padding:30px 18px 60px}.navin{padding:12px 18px}}
+</style></head>
+<body><div class="nav"><div class="navin"><span class="brand">Pauta Engine</span><a href="index.html">Fluxograma</a><a href="blueprint.html">Blueprint</a><a href="skill.html">Workflow</a><a href="referencias.html" class="on">Referências</a><a href="caso-contexto.html">Caso · Intake</a><a href="caso-memoria.html">Caso · Memória</a><a href="caso-pauta.html">Caso · Pauta</a><a href="caso-loop.html">Caso · Aprendizado</a></div></div>
+<div class="wrap"><p class="eyebrow">As 7 referências que a skill consulta</p><h1>Referências do workflow</h1>
+<p>Os documentos de apoio que a skill carrega em cada etapa. Cada um resolve uma decisão específica do processo.</p><h2 id="01">Referência 01 — Intake</h2>
+<p>Ficha que precisa estar respondida antes de escrever qualquer post. Se um campo estiver vazio,
+ele vira pergunta ao cliente ou pendência explícita na pauta — nunca suposição.</p>
+<h2>Identidade e oferta</h2>
+<ul>
+<li>Segmento, tempo de mercado, o que fabrica/vende de fato (e o que apenas revende)</li>
+<li>Posicionamento em uma frase — a promessa central</li>
+<li>Diferencial verificável: o que a concorrência não consegue afirmar</li>
+<li>Objetivo declarado do cliente para os próximos 6 meses</li>
+</ul>
+<h2>Personas (mínimo 2, máximo 4)</h2>
+<p>Para cada uma:
+- Cargo e poder de decisão (decide, influencia ou apenas usa)
+- Dor operacional concreta — não "quer eficiência", e sim o evento que dói
+- Gatilho de compra: o que acontece no mundo dela imediatamente antes de procurar solução
+- Vocabulário literal: 3–5 frases como ela mesma diria</p>
+<p>O vocabulário é o insumo mais subestimado. É ele que faz a copy soar como o mercado e não como
+agência. Colete frases reais de WhatsApp, comentário, ligação de vendas.</p>
+<h2>Pilares editoriais</h2>
+<ul>
+<li>3 a 5 pilares, cada um com tipo, propósito, persona-alvo, estágio de funil e formatos preferidos</li>
+<li>Proporção alvo entre eles no mês</li>
+</ul>
+<h2>Tom</h2>
+<ul>
+<li>3 adjetivos, cada um com uma frase explicando o que significa <strong>na prática</strong> para esse cliente</li>
+<li>Proibições explícitas, com o motivo — proibição sem motivo é ignorada sob pressão de prazo</li>
+<li>1 exemplo certo e 1 exemplo errado, escritos</li>
+</ul>
+<h2>Restrições de produção</h2>
+<ul>
+<li>Quem produz imagem/vídeo: IA, banco, foto do cliente, gravação nova</li>
+<li>O cliente entrega material com que confiabilidade? (histórico, não promessa)</li>
+<li>O que <strong>não</strong> pode ser gerado por IA (ex.: simular instalação real de terceiro, produto que a
+  empresa não fabrica, ambiente de cliente nomeado)</li>
+</ul>
+<h2>Fronteira do que pode ser afirmado</h2>
+<p>Lista fechada do que a copy pode alegar sem checar de novo: clientes atendidos, certificações,
+prazos, garantias, abrangência de entrega. <strong>Tudo fora dessa lista exige confirmação.</strong></p>
+<h2>Hooks saturados</h2>
+<p>O que o nicho inteiro já diz e ninguém acredita mais. Vira lista de bloqueio no gate.</p>
+<h2>Ângulos exclusivos</h2>
+<p>Territórios que nenhum concorrente ocupa. Vira a reserva estratégica da memória — o que garante
+que o mês 6 ainda tenha o que dizer.</p><h2 id="02">Referência 02 — Formato de briefing</h2>
+<p>Formato único para os três tipos. O critério é: o design consegue produzir sem fazer pergunta?</p>
+<h2>Regras que valem para os três</h2>
+<ul>
+<li><strong>Nunca campo <code>Data:</code> dentro do briefing.</strong> Data existe só na tabela de Visão Geral. Briefing com
+  data engessa o calendário quando a aprovação do cliente atrasa — e ela quase sempre atrasa.</li>
+<li><strong>Exatamente 5 hashtags</strong>, mix de nicho + segmento + marca.</li>
+<li><strong>Todo post termina em CTA claro.</strong></li>
+<li><strong>Numeração cronológica única</strong> no mês: E01, C02, C03, R04… nunca contagem separada por formato.</li>
+<li>Prefixo do código = formato (E estático, C carrossel, R Reels).</li>
+</ul>
+<h2>Estático</h2>
+<pre><code>E[n] — [Pilar] — [Tema]
+
+Estágio: [Topo / Meio / Fundo de Funil]
+Objetivo: [resultado esperado do post]
+Direcionamento: [persona, tom, referência visual, modo de produção]
+
+Headline: &quot;[texto principal da arte]&quot;
+Subtexto: &quot;[segunda linha de apoio]&quot;
+
+Legenda:
+[texto completo com quebras de linha]
+
+👉 [CTA]
+
+#tag1 #tag2 #tag3 #tag4 #tag5
+
+Hipótese: ...
+Métrica de leitura: ...
+Se falhar: ...
+</code></pre>
+<h2>Carrossel</h2>
+<p>Mesma abertura. <strong>Máximo 5 slides</strong> — não existe S6. Cada slide tem exatamente dois campos:</p>
+<pre><code>S1:
+Headline: &quot;[texto principal do slide]&quot;
+Subtexto: &quot;[apoio do slide]&quot;
+</code></pre>
+<p>Descrição livre no lugar de Headline/Subtexto é o erro mais comum: gera slide que o design tem que
+interpretar, e cada interpretação é uma ida e volta.</p>
+<h2>Reels</h2>
+<pre><code>R[n] — [Pilar] — [Tema] — [~Xs] — Produção: IA | Gravação com cliente
+
+Estágio / Objetivo / Direcionamento (incluir trilha e referência de ritmo)
+
+Headline: &quot;[abertura do vídeo]&quot;
+Subtexto: &quot;[frase de apoio]&quot;
+
+Roteiro:
+00:00–00:05 | [cena / narração / texto na tela]
+00:05–00:12 | [...]
+</code></pre>
+<p>Timecode sempre no formato <code>00:00–00:06</code>. Nunca <code>0–6s</code>, nunca <code>Cena 1</code>. E sempre declarar se a
+produção é IA ou gravação — é essa linha que determina se o post é executável sem o cliente.</p>
+<h2>Tabela de Visão Geral</h2>
+<p>Mínimo: <code># | Código | Título | Pilar | Estágio</code>. Acrescente colunas só quando resolverem uma dúvida
+real do momento (ex.: "Depende do cliente?" quando viabilidade está em risco).</p><h2 id="03">Referência 03 — Hipótese de engajamento</h2>
+<p>A camada que separa "calendário de posts" de "pauta que produz aprendizado".</p>
+<h2>Por que existe</h2>
+<p>Sem hipótese declarada antes de publicar, a leitura de resultado no fim do mês é sempre narrativa:
+o que foi bem ganha uma explicação inventada depois do fato, o que foi mal vira "o algoritmo". Nos
+dois casos, o mês seguinte não aprende nada e a pauta continua dependendo da intuição de quem
+escreve.</p>
+<p>Declarar antes torna o resultado falseável. É a diferença entre medir e justificar.</p>
+<h2>Formato</h2>
+<pre><code>Hipótese: [quem] vai [ação observável] porque [razão ancorada em dor/persona documentada]
+Métrica de leitura: [métrica específica] (referência: [número anterior] ou [primeira medição])
+Se falhar: [interpretação pré-comprometida] → [próximo teste]
+</code></pre>
+<h2>Regras</h2>
+<p><strong>A ação precisa ser observável.</strong> "Vai se identificar" não é. Salvar, comentar, tocar no link,
+compartilhar, assistir até o fim — são.</p>
+<p><strong>A razão precisa citar algo documentado.</strong> Se a justificativa não aponta para uma dor, um gatilho
+ou um vocabulário que está no dossiê, a hipótese é palpite disfarçado.</p>
+<p><strong>A métrica precisa ser uma só.</strong> Post que "espera engajamento e alcance e cliques" não testa nada.
+Escolha a métrica que o objetivo do post exige e ignore o resto na leitura.</p>
+<p><strong><code>Se falhar</code> é escrito antes.</strong> Depois do resultado é racionalização. E precisa distinguir as duas
+causas possíveis: o <strong>tema</strong> não interessa, ou o <strong>formato</strong> não serviu ao tema. São correções
+opostas — trocar um quando o problema é o outro queima mais um mês.</p>
+<h2>Métrica por estágio de funil</h2>
+<table>
+<thead>
+<tr>
+<th>Estágio</th>
+<th>Objetivo real</th>
+<th>Métrica primária</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Topo</td>
+<td>Ser encontrado por quem não conhece</td>
+<td>Alcance de não seguidores / views</td>
+</tr>
+<tr>
+<td>Topo (educativo)</td>
+<td>Ser guardado como referência</td>
+<td>Salvamentos ÷ alcance</td>
+</tr>
+<tr>
+<td>Meio</td>
+<td>Provocar reconhecimento do problema</td>
+<td>Comentários + compartilhamentos</td>
+</tr>
+<tr>
+<td>Meio (consideração)</td>
+<td>Manter atenção até o argumento</td>
+<td>Retenção / visualização completa</td>
+</tr>
+<tr>
+<td>Fundo</td>
+<td>Abrir rota de contato</td>
+<td>Toques no link / cliques no CTA</td>
+</tr>
+<tr>
+<td>Fundo (prova social)</td>
+<td>Remover objeção final</td>
+<td>Perfil visitado após o post</td>
+</tr>
+</tbody>
+</table>
+<h2>Exemplo completo</h2>
+<pre><code>Hipótese: o gestor de qualidade vai salvar este carrossel porque ele resolve uma dúvida de
+classificação normativa que hoje trava a decisão de compra (vocabulário registrado no dossiê:
+&quot;preciso adequar à ANVISA&quot;, &quot;qual norma se aplica&quot;).
+Métrica de leitura: salvamentos ÷ alcance (referência: média dos carrosséis educativos do mês
+anterior).
+Se falhar: se salvamentos ficarem abaixo da referência mas o alcance for normal, o tema não é dor
+ativa — reduzir o pilar normativo de 50% para 25% no mês seguinte. Se o alcance for baixo, o
+problema é distribuição e não tema — repetir o mesmo tema em estático único antes de descartar.
+</code></pre>
+<h2>Anti-padrões</h2>
+<table>
+<thead>
+<tr>
+<th>Escrito</th>
+<th>Problema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Espera-se bom engajamento"</td>
+<td>Não é falseável. Qualquer resultado confirma.</td>
+</tr>
+<tr>
+<td>"O público vai adorar"</td>
+<td>Ação não observável, razão não ancorada.</td>
+</tr>
+<tr>
+<td>"Métrica: engajamento geral"</td>
+<td>Métrica composta esconde qual mecanismo funcionou.</td>
+</tr>
+<tr>
+<td><code>Se falhar:</code> vazio</td>
+<td>Transforma fracasso em ruído em vez de dado.</td>
+</tr>
+</tbody>
+</table><h2 id="04">Referência 04 — Gate de revisão</h2>
+<p>Roda depois da pauta pronta e antes de entregar. <strong>Bloqueante:</strong> item reprovado volta para a
+Etapa 4. O gate não é opinião sobre a pauta — é verificação de conformidade.</p>
+<h2>Bloqueadores (reprovam a pauta inteira)</h2>
+<ul>
+<li>[ ] Algum post afirma política comercial, prazo, garantia, certificação ou cliente atendido que
+      <strong>não</strong> está na lista fechada do intake</li>
+<li>[ ] Algum post repete tema/ângulo central de post publicado nos 3 meses anteriores, sem que o
+      dado justifique a repetição</li>
+<li>[ ] Algum post está sem hipótese de engajamento completa (as 3 linhas)</li>
+<li>[ ] Mais de 1/3 dos posts depende de ação, foto, agenda ou acesso do cliente</li>
+<li>[ ] Dois posts do mesmo mês usam o mesmo produto como protagonista (exceção: roundup declarado)</li>
+<li>[ ] Algum post mistura personas que a estratégia do cliente manda separar</li>
+</ul>
+<h2>Estrutura</h2>
+<ul>
+<li>[ ] Distribuição de funil respeitada; nunca 2 posts de Conversão consecutivos</li>
+<li>[ ] Proporção entre pilares dentro do documentado na linha editorial</li>
+<li>[ ] Pelo menos 1 ângulo exclusivo ainda não usado estreia no mês (enquanto houver reserva)</li>
+<li>[ ] Numeração cronológica única e correta</li>
+</ul>
+<h2>Formato</h2>
+<ul>
+<li>[ ] Nenhum briefing contém campo <code>Data:</code></li>
+<li>[ ] Nenhum carrossel passa de 5 slides</li>
+<li>[ ] Todo slide tem exatamente <code>Headline:</code> e <code>Subtexto:</code></li>
+<li>[ ] Timecodes de Reels no formato <code>00:00–00:06</code></li>
+<li>[ ] Todo Reels declara IA ou gravação</li>
+<li>[ ] Exatamente 5 hashtags em todos os posts</li>
+<li>[ ] Todo post tem CTA</li>
+</ul>
+<h2>Tom</h2>
+<ul>
+<li>[ ] Nenhum hook da lista de saturados do cliente</li>
+<li>[ ] Nenhuma abertura institucional ("A [marca] é uma empresa...")</li>
+<li>[ ] Nenhuma proibição de tom violada</li>
+<li>[ ] Nenhum comparativo que denigra concorrente — soa como discurso de desconto e respinga na
+      própria marca</li>
+</ul>
+<h2>Registro</h2>
+<p>Ao fim, escreva na pauta o que o gate reprovou e como foi corrigido. Esse registro é o que
+distingue processo de sorte: prova que a pauta passou por verificação, não que saiu certa de
+primeira. É também o insumo que revela quais erros se repetem — e portanto qual etapa anterior
+precisa mudar.</p><h2 id="05">Referência 05 — Leitura mensal</h2>
+<p>Fecha o ciclo. Sem esta etapa o sistema entrega execução, mas não aprendizado — e a pauta do mês 7
+é a do mês 1 com sinônimos.</p>
+<h2>Procedimento</h2>
+<p><strong>1. Confronte hipótese × resultado, post a post.</strong> Só a métrica primária declarada. Ignore as
+outras nesta leitura — elas entram no diagnóstico, não no veredito.</p>
+<p><strong>2. Classifique:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Veredito</th>
+<th>Critério</th>
+<th>Consequência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confirmada</td>
+<td>Métrica ≥ referência</td>
+<td>Ângulo entra em "apostas seguras"; pode escalar</td>
+</tr>
+<tr>
+<td>Refutada</td>
+<td>Métrica &lt; referência, alcance normal</td>
+<td>Executar a linha <code>Se falhar</code> já escrita</td>
+</tr>
+<tr>
+<td>Inconclusiva</td>
+<td>Alcance anômalo (p/ cima ou p/ baixo)</td>
+<td>Distribuição contaminou a leitura; repetir o teste</td>
+</tr>
+</tbody>
+</table>
+<p>Distinguir refutada de inconclusiva é o passo mais importante. Descartar um ângulo bom porque o
+post teve alcance ruim é o erro que mais empobrece a pauta ao longo do ano.</p>
+<p><strong>3. Procure o padrão, não o campeão.</strong> Um post que explodiu diz pouco. Três posts do mesmo pilar
+acima da referência dizem muito. A pergunta é sempre "que mecanismo se repetiu?" — formato, estágio
+de funil, tipo de abertura, presença de dado numérico.</p>
+<p><strong>4. Atualize <code>_memoria.md</code>:</strong> temas usados, vereditos, ângulos exclusivos consumidos, novas apostas
+seguras, hipóteses a repetir por inconclusão.</p>
+<p><strong>5. Ajuste a Etapa 3 do mês seguinte.</strong> O aprendizado precisa virar mudança de distribuição, não
+observação num relatório. Se o pilar normativo foi refutado duas vezes, ele encolhe. Se carrossel
+educativo confirma sempre, ele cresce.</p>
+<h2>Saída</h2>
+<p>Um bloco curto no topo da pauta seguinte:</p>
+<pre><code>## O que o mês anterior ensinou
+- Confirmado: [ângulo] — [métrica] vs [referência]. Consequência: [o que muda]
+- Refutado: [ângulo] — [métrica] vs [referência]. Aplicando: [linha &quot;Se falhar&quot;]
+- Inconclusivo: [ângulo] — repetir com [ajuste]
+- Mudança de distribuição: [pilar X de Y% para Z%]
+</code></pre>
+<p>Esse bloco é a prova visível de que a pauta é consequência de dado, e não de quem a escreveu.</p><h2 id="06">Referência 06 — Seleção de assunto</h2>
+<p>De onde sai o tema de cada post. É a pergunta mais decisiva do processo e a que mais costuma ser
+respondida por intuição — motivo pelo qual a pauta acaba dependendo de quem escreve.</p>
+<p>Aqui o assunto <strong>não é escolhido, é derivado</strong>: cinco fontes ordenadas por prioridade, quatro
+filtros bloqueantes. Se nenhuma fonte produz assunto viável para um slot, o slot muda de pilar em
+vez de o assunto ser inventado.</p>
+<hr />
+<h2>O slot vem antes do assunto</h2>
+<p>Cada post chega à escrita já com <strong>pilar, estágio de funil e formato-alvo</strong> definidos na Etapa 3.
+Escrever não é decidir o que fazer — é preencher um slot com restrição conhecida.</p>
+<p>Isso inverte o vício mais comum: começar pelas ideias que vêm fácil e descobrir no fim que o mês
+não tem fundo de funil.</p>
+<hr />
+<h2>As 5 fontes, em ordem de prioridade</h2>
+<p><strong>1. Reserva de ângulos exclusivos do dossiê.</strong> Territórios que nenhum concorrente do nicho ocupa,
+mapeados no intake. É a fonte de maior valor: gera post que só aquele cliente poderia publicar.
+Enquanto houver reserva, <strong>todo mês estreia pelo menos um</strong>.</p>
+<p><strong>2. Dor da persona do slot + vocabulário literal.</strong> A dor concreta registrada no intake, dita com
+as palavras que a persona usa de verdade. O vocabulário é o insumo mais subestimado — é ele que faz
+a copy soar como o mercado e não como agência.</p>
+<p><strong>3. Alinhamento recente.</strong> Produto, linha ou tema que o cliente colocou em foco no último check-in.
+Tem prioridade sobre o dossiê quando conflita, porque é mais novo.</p>
+<p><strong>4. Território de portfólio nunca coberto.</strong> Linha de produto, vertical de cliente ou tipo de
+ambiente que existe na operação e nunca virou post. Custa pouco e amplia o alcance temático da
+conta.</p>
+<p><strong>5. Benchmark do nicho.</strong> O que um concorrente ou marca adjacente fez que funcionou — usado como
+referência de formato ou ângulo, nunca copiado como tema.</p>
+<p><strong>Se nenhuma fonte serve ao slot:</strong> o slot troca de pilar. Nunca se inventa assunto para preencher
+calendário — é assim que nasce post genérico que não serve a ninguém.</p>
+<hr />
+<h2>Os 4 filtros bloqueantes</h2>
+<p>Todo assunto candidato passa por estes quatro antes de virar briefing. Qualquer um reprova.</p>
+<p><strong>1. Memória de temas.</strong> O tema apareceu nos últimos 3 meses? Bloqueado — salvo se o dado da
+Etapa 6 justificar a repetição (ângulo confirmado que merece escalar). Repetição por falta de ideia
+é o erro mais frequente e o mais invisível: ninguém percebe no mês, só o cliente percebe no
+trimestre.</p>
+<p><strong>2. Hooks saturados.</strong> A lista do cliente com o que o nicho inteiro já diz e ninguém acredita mais.</p>
+<p><strong>3. Fronteira do afirmável.</strong> O assunto exige afirmar prazo, garantia, política comercial,
+certificação ou nome de cliente atendido? Se não está na lista fechada do intake, ou muda o ângulo
+ou vira pendência explícita. Nunca se preenche por plausibilidade.</p>
+<p><strong>4. Produto já protagonista no mês.</strong> O mesmo produto não carrega dois posts do mesmo mês.
+Exceção: um roundup declarado que reúne vários de propósito.</p>
+<hr />
+<h2>Registro</h2>
+<p>O assunto aprovado entra na memória com a fonte que o originou. Saber que um mês veio 80% da fonte
+2 e nada da fonte 1 é o sinal antecipado de que a reserva estratégica está parada — e que a conta
+vai ficar repetitiva dois meses antes de isso aparecer nas métricas.</p><h2 id="07">Referência 07 — Ecossistema de skills</h2>
+<p>O Pauta Engine não roda sozinho. Ele é o motor central de um conjunto de skills construídas para a
+operação, cada uma cobrindo uma etapa do ciclo. É esse encadeamento que permite que a conta inteira
+funcione sem depender do repertório de uma pessoa.</p>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Etapa</th>
+<th>O que resolve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboarding-cliente</code></td>
+<td>Etapa 0</td>
+<td>Monta a estrutura inicial do cliente novo (CLAUDE.md, ficha, dossiê, pastas) a partir de notas de kick-off — evita dossiê incompleto, que é a causa raiz de pauta fraca</td>
+</tr>
+<tr>
+<td><code>alinhamento-cliente</code></td>
+<td>Alimenta 1 e 2</td>
+<td>Registra alinhamentos de reunião no CLAUDE.md e na memória, de forma consistente em vez de ad hoc. É o que faz "alinhamento recente vence documento antigo" ser verificável</td>
+</tr>
+<tr>
+<td><code>social-media-maestro</code></td>
+<td>1 e 3</td>
+<td>Pesquisa de cliente, linha editorial, pilares de conteúdo, distribuição de funil e frequência — produz os insumos que a Etapa 3 consome</td>
+</tr>
+<tr>
+<td><code>copy-maestro</code></td>
+<td>4.2 e 4.4</td>
+<td>Persona, jornada, níveis de consciência, dores e objeções. É o que ancora a escolha de ângulo e a escrita do hook em estratégia, não em gosto</td>
+</tr>
+<tr>
+<td><strong><code>pauta-engine</code></strong></td>
+<td><strong>3, 4 e 5</strong></td>
+<td><strong>O motor: distribuição, briefing, hipótese e gate</strong></td>
+</tr>
+<tr>
+<td><code>roteirista-cinema-video</code></td>
+<td>4.5 e 4.7</td>
+<td>Transforma a cena descrita no roteiro de Reels em prompt para IA de vídeo, mantendo consistência visual entre cenas</td>
+</tr>
+<tr>
+<td><code>image-prompt-generator</code></td>
+<td>4.7</td>
+<td>Converte o direcionamento visual do briefing em prompt estruturado de imagem — fecha a ponte entre copy e produção</td>
+</tr>
+<tr>
+<td><code>revisor-pauta</code></td>
+<td>5</td>
+<td>Segunda camada de checagem: coerência, mix, funil, repetição e viabilidade, com relatório de problemas priorizados</td>
+</tr>
+<tr>
+<td><code>analisador-metricas</code></td>
+<td>6</td>
+<td>Lê métricas do Meta Business Suite, diagnostica, correlaciona tipo de conteúdo com resultado, gera o relatório do cliente <strong>e registra os achados no CLAUDE.md</strong> — é o que fecha o laço de volta para a memória</td>
+</tr>
+</tbody>
+</table>
+<h2>Por que isso importa para reuso</h2>
+<p>Uma skill isolada resolve um passo. O que torna o sistema adotável por outra pessoa é o
+encadeamento: a saída de uma é a entrada da próxima, e todas escrevem nos mesmos arquivos do
+cliente (<code>CLAUDE.md</code>, <code>01_dossie.md</code>, <code>_memoria.md</code>).</p>
+<p>O ponto de fechamento é o <code>analisador-metricas</code>: ele não só produz o relatório do mês, ele <strong>grava
+os achados de volta no contexto do cliente</strong>. Sem isso, a Etapa 6 produziria um PDF bonito que
+ninguém lê na hora de montar o mês seguinte — que é exatamente o destino da maioria dos relatórios
+de performance.</p>
+<h2>Grau de acoplamento</h2>
+<p>O <code>pauta-engine</code> funciona sozinho, com os arquivos de contexto preenchidos à mão. As outras skills
+são aceleradores de etapa, não dependências. Quem adotar só o motor tem o processo completo; quem
+adotar o conjunto tem o processo automatizado em mais pontos.</p></div></body></html>

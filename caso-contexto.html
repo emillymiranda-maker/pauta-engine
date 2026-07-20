@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caso · Etapa 1 — Intake — Pauta Engine</title><style>
+:root{--bg:#0b0b0c;--panel:#141416;--panel2:#1a1a1d;--line:#2a2a2f;
+ --red:#c0392b;--red-soft:#e05a4a;--txt:#f2f2f3;--dim:#8b8b93}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.65;
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+ -webkit-font-smoothing:antialiased}
+.nav{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.92);
+ backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{max-width:1000px;margin:0 auto;padding:14px 28px;display:flex;flex-wrap:wrap;
+ gap:6px;align-items:center}
+.navin .brand{font-weight:700;font-size:14px;margin-right:14px;white-space:nowrap}
+.navin a{color:var(--dim);text-decoration:none;font-size:13.5px;padding:6px 11px;
+ border-radius:8px;white-space:nowrap}
+.navin a:hover{color:var(--txt);background:var(--panel2)}
+.navin a.on{color:var(--txt);background:var(--panel2);border:1px solid var(--line)}
+.wrap{max-width:1000px;margin:0 auto;padding:44px 28px 90px}
+.eyebrow{color:var(--red-soft);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+ font-weight:700;margin:0 0 12px}
+h1{font-size:clamp(28px,4.6vw,42px);line-height:1.12;letter-spacing:-.02em;margin:0 0 26px}
+h2{font-size:23px;letter-spacing:-.01em;margin:52px 0 14px;padding-top:22px;
+ border-top:1px solid var(--line)}
+h3{font-size:17.5px;margin:34px 0 10px;color:var(--txt)}
+h4{font-size:15px;margin:24px 0 8px;color:var(--red-soft)}
+p{margin:0 0 16px}
+a{color:var(--red-soft)}
+strong{color:#fff}
+ul,ol{margin:0 0 18px;padding-left:22px}
+li{margin-bottom:7px}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0}
+blockquote{margin:22px 0;padding:16px 20px;background:var(--panel);
+ border-left:3px solid var(--red);border-radius:0 12px 12px 0;color:#c9c9d1}
+blockquote p:last-child{margin-bottom:0}
+code{background:var(--panel2);border:1px solid var(--line);border-radius:6px;
+ padding:2px 6px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+ color:#e8b4ad}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+ padding:18px 20px;overflow-x:auto;margin:0 0 20px}
+pre code{background:none;border:0;padding:0;color:#c9c9d1;font-size:12.5px;line-height:1.6}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:0 0 24px;display:block;
+ overflow-x:auto}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);
+ vertical-align:top}
+th{color:var(--red-soft);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+ font-weight:700;white-space:nowrap}
+tbody tr:hover{background:var(--panel)}
+.foot{max-width:1000px;margin:0 auto;padding:0 28px 70px}
+.foot a{display:inline-block;border:1px solid var(--line);background:var(--panel2);
+ border-radius:10px;padding:11px 18px;text-decoration:none;color:var(--txt);font-size:14px}
+.foot a:hover{border-color:var(--red)}
+@media(max-width:640px){.wrap{padding:30px 18px 60px}.navin{padding:12px 18px}}
+</style></head>
+<body><div class="nav"><div class="navin"><span class="brand">Pauta Engine</span><a href="index.html">Fluxograma</a><a href="blueprint.html">Blueprint</a><a href="skill.html">Workflow</a><a href="referencias.html">Referências</a><a href="caso-contexto.html" class="on">Caso · Intake</a><a href="caso-memoria.html">Caso · Memória</a><a href="caso-pauta.html">Caso · Pauta</a><a href="caso-loop.html">Caso · Aprendizado</a></div></div>
+<div class="wrap"><p class="eyebrow">Contexto verificado do cliente</p><h1>Caso · Etapa 1 — Intake</h1>
+
+<blockquote>
+<p><strong>Aviso de anonimização.</strong> Este caso é uma conta real de uma agência V4, com resultados reais.
+O nome da marca foi substituído pelo alias <strong>Vedaplan</strong>, e foram removidos faturamento, nomes de
+clientes atendidos e qualquer informação comercial de terceiros. Os percentuais de performance,
+a estrutura da pauta e os briefings são os originais.</p>
+</blockquote>
+<h2>Identidade e oferta</h2>
+<ul>
+<li><strong>Segmento:</strong> fabricante de cortinas de PVC industrial (fabricação própria) + trilhos pendurais
+  (fornecimento exclusivo) + armazenagem industrial + EPIs</li>
+<li><strong>Tempo de mercado:</strong> 14 anos</li>
+<li><strong>Posicionamento:</strong> "A empresa que deixa sua operação dentro da norma, antes do fiscal aparecer."</li>
+<li><strong>Diferencial verificável:</strong> fabricação própria (a maioria dos concorrentes revende) e um
+  componente de trilho que nenhum concorrente oferece</li>
+<li><strong>Objetivo declarado:</strong> virar referência em conformidade ANVISA/NR no segmento industrial</li>
+</ul>
+<h2>Ponto de partida — o que torna este caso uma prova de processo</h2>
+<p><strong>A conta partiu do zero.</strong> Nenhuma presença social estruturada antes do início do trabalho: sem
+audiência herdada, sem histórico de conteúdo, sem acervo de material. Não há repertório prévio —
+do cliente nem do operador — que explique o resultado. O que houver de performance é atribuível ao
+processo.</p>
+<p>O nicho inteiro também estava vazio de conteúdo de qualidade: oportunidade de liderança, e ao mesmo
+tempo ausência de benchmark para copiar.</p>
+<h2>Personas</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Quem</th>
+<th>Dor concreta</th>
+<th>Gatilho de compra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Gestor de qualidade / segurança alimentar</td>
+<td>Autuação sanitária, contaminação cruzada</td>
+<td>Vistoria marcada ou auto lavrado</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Gestor industrial / de operações</td>
+<td>Linha parada, perda térmica, custo de manutenção</td>
+<td>Equipamento falhou ou norma nova</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Comprador / almoxarifado</td>
+<td>Desorganização de estoque, perda de produto</td>
+<td>Crescimento da operação quebrou o improviso</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vocabulário literal registrado:</strong>
+- "A vigilância veio e autuou a câmara fria"
+- "Preciso adequar à ANVISA"
+- "Quanto custa para deixar dentro da norma?"
+- "Alguém que resolve, não só vende"
+- "Que saiba o que a ANVISA exige"</p>
+<h2>Pilares editoriais</h2>
+<table>
+<thead>
+<tr>
+<th>Pilar</th>
+<th>Tipo</th>
+<th>Funil</th>
+<th>Formatos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — Norma Antes da Multa</td>
+<td>Autoridade técnica</td>
+<td>Awareness → Consideration</td>
+<td>Carrossel, estático com dado</td>
+</tr>
+<tr>
+<td>2 — Operação Que Não Para</td>
+<td>Conexão</td>
+<td>Awareness → Trigger</td>
+<td>Estático, carrossel comparativo</td>
+</tr>
+<tr>
+<td>3 — Produto para Cada Ambiente</td>
+<td>Produto</td>
+<td>Consideration → Intent</td>
+<td>Carrossel problema→solução</td>
+</tr>
+<tr>
+<td>4 — 14 Anos de Prova</td>
+<td>Prova social</td>
+<td>Intent → Conversion</td>
+<td>Estático credencial</td>
+</tr>
+</tbody>
+</table>
+<h2>Tom</h2>
+<p><strong>Sério</strong> (fala como quem conhece a operação por dentro) · <strong>Confiável</strong> (dado concreto, nunca
+promessa genérica) · <strong>Tradicional</strong> (solidez de 14 anos, não modismo de startup).</p>
+<p><strong>Proibições, com motivo:</strong>
+1. "Qualidade", "durabilidade", "resistência" sem dado concreto em seguida — todo concorrente usa,
+   nenhum comprador acredita
+2. Abertura institucional ("A [marca] é uma empresa...") — começa pelo problema, pela norma ou pelo dado
+3. Tom de varejo/liquidação ("Aproveite!", "Só hoje!") — o comprador B2B industrial desconfia
+4. Emoji em excesso ou caixa alta de urgência (🚨 "URGENTE") — destrói a autoridade técnica</p>
+<p>✅ <em>"A vigilância sanitária não avisa quando vai aparecer."</em>
+❌ <em>"Temos os melhores produtos plásticos do mercado com qualidade garantida!"</em></p>
+<h2>Restrições de produção</h2>
+<p><strong>Produção 100% IA</strong> (alinhamento de 08/07/2026, regra permanente): nenhum post pode depender de
+foto do cliente, agenda de gravação ou acesso a fábrica/instalação.</p>
+<p><strong>Não pode ser gerado por IA:</strong> imagem que simule instalação real de cliente nomeado — seria
+alegação visual não verificável. Esses posts são tipográficos.</p>
+<h2>Fronteira do que pode ser afirmado</h2>
+<p>Fabricação própria · 14 anos de mercado · entrega nacional · trilho pendural exclusivo · quatro
+clientes de referência confirmados (2 industriais de grande porte, 2 do setor alimentício — nomes
+omitidos nesta versão pública). Fora dessa lista: confirmar antes.</p>
+<blockquote>
+<p>Registro do próprio processo: uma versão anterior da linha editorial citava dois clientes que
+nunca foram confirmados. O gate pegou e removeu. É exatamente o tipo de erro que a fronteira
+explícita existe para bloquear.</p>
+</blockquote>
+<h2>Hooks saturados (bloqueio no gate)</h2>
+<p>"Qualidade e durabilidade garantidas" · "Atendemos todo o Brasil"</p>
+<h2>Ângulos exclusivos — reserva estratégica</h2>
+<ol>
+<li>A consultora de conformidade — diagnóstico técnico antes de vender</li>
+<li>O que acontece quando você é autuado — custo real da não conformidade</li>
+<li>Fabricação própria = entrega no prazo</li>
+<li>Bastidores da fábrica</li>
+<li>O trilho pendural exclusivo</li>
+</ol></div><div class="foot"><a href="https://github.com/emillymiranda-maker/pauta-engine/blob/main/caso/00-contexto.md">Ver o arquivo original (caso/00-contexto.md) no GitHub &rarr;</a></div></body></html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workflow executável — Pauta Engine</title><style>
+:root{--bg:#0b0b0c;--panel:#141416;--panel2:#1a1a1d;--line:#2a2a2f;
+ --red:#c0392b;--red-soft:#e05a4a;--txt:#f2f2f3;--dim:#8b8b93}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.65;
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+ -webkit-font-smoothing:antialiased}
+.nav{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.92);
+ backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{max-width:1000px;margin:0 auto;padding:14px 28px;display:flex;flex-wrap:wrap;
+ gap:6px;align-items:center}
+.navin .brand{font-weight:700;font-size:14px;margin-right:14px;white-space:nowrap}
+.navin a{color:var(--dim);text-decoration:none;font-size:13.5px;padding:6px 11px;
+ border-radius:8px;white-space:nowrap}
+.navin a:hover{color:var(--txt);background:var(--panel2)}
+.navin a.on{color:var(--txt);background:var(--panel2);border:1px solid var(--line)}
+.wrap{max-width:1000px;margin:0 auto;padding:44px 28px 90px}
+.eyebrow{color:var(--red-soft);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+ font-weight:700;margin:0 0 12px}
+h1{font-size:clamp(28px,4.6vw,42px);line-height:1.12;letter-spacing:-.02em;margin:0 0 26px}
+h2{font-size:23px;letter-spacing:-.01em;margin:52px 0 14px;padding-top:22px;
+ border-top:1px solid var(--line)}
+h3{font-size:17.5px;margin:34px 0 10px;color:var(--txt)}
+h4{font-size:15px;margin:24px 0 8px;color:var(--red-soft)}
+p{margin:0 0 16px}
+a{color:var(--red-soft)}
+strong{color:#fff}
+ul,ol{margin:0 0 18px;padding-left:22px}
+li{margin-bottom:7px}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0}
+blockquote{margin:22px 0;padding:16px 20px;background:var(--panel);
+ border-left:3px solid var(--red);border-radius:0 12px 12px 0;color:#c9c9d1}
+blockquote p:last-child{margin-bottom:0}
+code{background:var(--panel2);border:1px solid var(--line);border-radius:6px;
+ padding:2px 6px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+ color:#e8b4ad}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+ padding:18px 20px;overflow-x:auto;margin:0 0 20px}
+pre code{background:none;border:0;padding:0;color:#c9c9d1;font-size:12.5px;line-height:1.6}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:0 0 24px;display:block;
+ overflow-x:auto}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);
+ vertical-align:top}
+th{color:var(--red-soft);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+ font-weight:700;white-space:nowrap}
+tbody tr:hover{background:var(--panel)}
+.foot{max-width:1000px;margin:0 auto;padding:0 28px 70px}
+.foot a{display:inline-block;border:1px solid var(--line);background:var(--panel2);
+ border-radius:10px;padding:11px 18px;text-decoration:none;color:var(--txt);font-size:14px}
+.foot a:hover{border-color:var(--red)}
+@media(max-width:640px){.wrap{padding:30px 18px 60px}.navin{padding:12px 18px}}
+</style></head>
+<body><div class="nav"><div class="navin"><span class="brand">Pauta Engine</span><a href="index.html">Fluxograma</a><a href="blueprint.html">Blueprint</a><a href="skill.html" class="on">Workflow</a><a href="referencias.html">Referências</a><a href="caso-contexto.html">Caso · Intake</a><a href="caso-memoria.html">Caso · Memória</a><a href="caso-pauta.html">Caso · Pauta</a><a href="caso-loop.html">Caso · Aprendizado</a></div></div>
+<div class="wrap"><p class="eyebrow">A skill — 6 etapas e 8 sub-passos</p><h1>Workflow executável</h1>
+<hr />
+<p>name: pauta-engine
+description: &gt;
+  Transforma contexto, objetivos e repertório de um cliente em uma pauta mensal de social media
+  que já nasce pronta para execução e para aprendizado — cada post com briefing completo, copy
+  final e uma hipótese de engajamento falseável com métrica de leitura definida antes de publicar.
+  Use SEMPRE que for criar, montar, gerar ou refazer a pauta de um cliente (mensal, quinzenal ou
+  post avulso) — mesmo que a palavra "pauta" não apareça. Ative também em "monta a pauta de
+  [cliente]", "cria o calendário de [mês]", "preciso do briefing de [post]", "faz os posts de
+  [cliente]". Use também no fim do mês, quando chegarem as métricas, para fechar o ciclo de
+  aprendizado ("como foi o mês", "lê os resultados", "o que aprendemos").</p>
+<hr />
+<h1>Pauta Engine</h1>
+<p>Motor de produção de pauta de social media. O objetivo não é gerar temas — é gerar uma pauta que
+qualquer pessoa da equipe consiga executar sem o autor por perto, e que produza aprendizado
+mensurável mesmo quando o resultado é ruim.</p>
+<p><strong>Premissa central:</strong> a qualidade de uma pauta não vem da criatividade de quem escreve. Vem de
+quatro insumos estruturados (contexto, memória, distribuição, hipótese) e de um gate que roda antes
+da produção. Criatividade opera dentro desse esqueleto, não no lugar dele.</p>
+<hr />
+<h2>O ciclo</h2>
+<pre><code>[1] INTAKE  →  [2] MEMÓRIA  →  [3] DISTRIBUIÇÃO  →  [4] BRIEFING+HIPÓTESE  →  [5] GATE  →  produção
+                    ↑                                                                          │
+                    └──────────────────────  [6] LEITURA  ←───────────────────────────────────┘
+</code></pre>
+<p>As etapas 1 e 2 são leitura. A 3 é decisão estrutural. A 4 é escrita. A 5 é bloqueio. A 6 realimenta
+a 2 — é o que impede o mês seguinte de ser uma repetição do anterior com palavras diferentes.</p>
+<hr />
+<h2>Etapa 1 — INTAKE (obrigatória, nesta ordem)</h2>
+<p>Nunca escreva o primeiro post antes de ler, nesta sequência:</p>
+<ol>
+<li><strong><code>[Cliente]/CLAUDE.md</code></strong> — alinhamentos mais recentes. É o arquivo mais provável de conter algo
+   que invalida o mês atual (mudança de tom, de identidade visual, de CTA, de regra de produção).
+   Alinhamento de julho vence dossiê de maio, sempre.</li>
+<li><strong><code>[Cliente]/01_dossie.md</code></strong> e <strong><code>02_linha_editorial.md</code></strong> — posicionamento, personas, pilares,
+   tom, proibições, hooks saturados, ângulos exclusivos ainda não usados.</li>
+<li><strong>Memória de temas</strong> (<code>[Cliente]/pautas/_memoria.md</code>, ver Etapa 2).</li>
+<li><strong>Pauta do mês anterior</strong> em <code>pautas/AAAA-MM/</code>.</li>
+</ol>
+<p>Se qualquer um desses não existir, <strong>pare e sinalize</strong>. Não preencha a lacuna com suposição — pauta
+construída sobre contexto inventado é o erro mais caro do processo, porque só aparece na aprovação
+do cliente.</p>
+<p>O que precisa estar respondido antes de seguir está em <code>reference/01-intake.md</code>.</p>
+<h2>Etapa 2 — MEMÓRIA</h2>
+<p>A memória é o que substitui o repertório do autor. Sem ela, o processo depende de alguém lembrar o
+que já foi feito — e é exatamente aí que a pauta vira dependente de uma pessoa.</p>
+<p>Mantenha <code>[Cliente]/pautas/_memoria.md</code> com três listas vivas:</p>
+<ul>
+<li><strong>Temas e ângulos já publicados</strong> — com o mês e o código do post. Um tema só volta se o dado
+  justificar (ver Etapa 6), nunca por falta de ideia.</li>
+<li><strong>Ângulos exclusivos do dossiê ainda não usados</strong> — a reserva estratégica. Todo mês deve estrear
+  pelo menos um território novo enquanto houver reserva.</li>
+<li><strong>Alinhamentos datados</strong> — o que mudou, quando, e o que isso invalida.</li>
+</ul>
+<h2>Etapa 3 — DISTRIBUIÇÃO</h2>
+<p>Decida a estrutura do mês <strong>antes</strong> de pensar em qualquer tema. Isso evita o vício de escrever os
+posts que vêm mais fácil à cabeça e descobrir no fim que o mês inteiro é topo de funil.</p>
+<p>Fixe quatro eixos:</p>
+<table>
+<thead>
+<tr>
+<th>Eixo</th>
+<th>Regra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Volume</strong></td>
+<td>Conforme contrato (checar CLAUDE.md do cliente — varia, tipicamente 8–12)</td>
+</tr>
+<tr>
+<td><strong>Pilar</strong></td>
+<td>Respeitar a proporção documentada na linha editorial do cliente</td>
+</tr>
+<tr>
+<td><strong>Funil</strong></td>
+<td>Distribuir Topo/Meio/Fundo — nunca concentrar tudo num estágio, nunca 2 posts de Conversão consecutivos</td>
+</tr>
+<tr>
+<td><strong>Dependência de produção</strong></td>
+<td>Classificar cada post: autônomo (IA/material existente) ou dependente (foto nova, agenda, ação do cliente)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Regra de viabilidade:</strong> se mais de 1/3 do mês depende de ação do cliente, o mês tem risco alto de
+não sair. Reduza a dependência antes de escrever — não depois, quando já houver copy pronta para
+jogar fora.</p>
+<h2>Etapa 4 — BRIEFING + HIPÓTESE</h2>
+<p>É a etapa mais longa e a que mais se beneficia de sub-passos explícitos. Cada post percorre oito,
+na ordem. Pular a ordem é o que produz post bonito que não serve ao slot que ele deveria ocupar.</p>
+<h3>4.1 — Herdar o slot</h3>
+<p>O post já chega com <strong>pilar, estágio de funil e formato-alvo</strong> definidos na Etapa 3. Escrever não é
+decidir o que fazer: é preencher um slot com restrição conhecida. Isso inverte o vício de começar
+pelas ideias que vêm fácil e descobrir no fim que falta fundo de funil.</p>
+<h3>4.2 — Selecionar o assunto</h3>
+<p>O assunto não é escolhido, é <strong>derivado</strong> de cinco fontes ordenadas por prioridade, passando por
+quatro filtros bloqueantes:</p>
+<p><strong>Fontes:</strong> (1) reserva de ângulos exclusivos do dossiê · (2) dor da persona do slot + vocabulário
+literal · (3) alinhamento recente · (4) território de portfólio nunca coberto · (5) benchmark do
+nicho.</p>
+<p><strong>Filtros:</strong> (1) memória de temas — repetiu nos últimos 3 meses? bloqueado · (2) hooks saturados ·
+(3) fronteira do afirmável · (4) produto já protagonista neste mês.</p>
+<p>Se nenhuma fonte serve ao slot, <strong>o slot troca de pilar</strong> — nunca se inventa assunto para preencher
+calendário. Detalhamento completo em <code>reference/06-selecao-de-assunto.md</code>.</p>
+<p>Apoio: <code>copy-maestro</code> para ancorar o ângulo em dor, objeção e nível de consciência.</p>
+<h3>4.3 — Definir o formato pelo argumento</h3>
+<p>O formato-alvo da Etapa 3 é uma intenção; o argumento confirma ou corrige. O critério é a <strong>forma
+do raciocínio</strong>, não estética:</p>
+<table>
+<thead>
+<tr>
+<th>Se o argumento é…</th>
+<th>Formato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sequência, comparação, glossário, lista de sinais</td>
+<td>Carrossel</td>
+</tr>
+<tr>
+<td>Afirmação única que se sustenta sozinha</td>
+<td>Estático</td>
+</tr>
+<tr>
+<td>Demonstração, processo, movimento, bastidor</td>
+<td>Reels</td>
+</tr>
+</tbody>
+</table>
+<p>Argumento de 4 passos espremido em estático perde o passo; afirmação única esticada em 5 slides
+gera slide vazio. Se o formato mudar aqui, a Etapa 3 precisa ser reequilibrada.</p>
+<h3>4.4 — Escrever o hook</h3>
+<p>Headline do estático ou S1 do carrossel. Abre por <strong>problema, norma ou dado</strong> — nunca por
+apresentação institucional. Usa o vocabulário literal da persona, não o vocabulário da categoria.
+É a única linha que decide se o resto será lido.</p>
+<h3>4.5 — Desenvolver o corpo</h3>
+<p>Carrossel: um passo por slide, máximo 5, cada um com <code>Headline:</code> e <code>Subtexto:</code>. Reels: roteiro em
+timecodes <code>00:00–00:06</code>. Estático: subtexto que completa a headline sem repeti-la.</p>
+<p>Os passos 4.3 a 4.7 produzem a <strong>camada de execução</strong> — o briefing completo o bastante para o
+design produzir sem perguntar nada. Formato exato em <code>reference/02-formato-briefing.md</code>.
+Apoio: <code>roteirista-cinema-video</code> para o roteiro de Reels.</p>
+<h3>4.6 — Fechar CTA e hashtags</h3>
+<p>CTA no padrão vigente do cliente (checar alinhamentos — CTA muda). Exatamente 5 hashtags, mix de
+nicho + segmento + marca.</p>
+<h3>4.7 — Direcionamento de produção</h3>
+<p>Declarar o modo (IA ou gravação), a referência visual e <strong>o que não pode ser gerado</strong> — simular
+instalação real de cliente nomeado, produto que a empresa não fabrica, ambiente não verificável.
+Este campo é o que determina se o post é executável sem o cliente.
+Apoio: <code>image-prompt-generator</code> e <code>roteirista-cinema-video</code> convertem o direcionamento em prompt.</p>
+<h3>4.8 — Escrever a hipótese</h3>
+<p><strong>Camada de aprendizado</strong> — três linhas obrigatórias:</p>
+<pre><code>Hipótese: [quem] vai [ação esperada] porque [razão ancorada na persona/dor]
+Métrica de leitura: [métrica específica] (referência: [número ou &quot;primeira medição&quot;])
+Se falhar: [a leitura que se faz do fracasso e o próximo teste]
+</code></pre>
+<p>A linha <code>Se falhar</code> é a mais importante e a mais pulada. Sem ela, um post ruim vira só um post ruim.
+Com ela, vira um dado. Regras completas em <code>reference/03-hipotese-engajamento.md</code>.</p>
+<p><strong>Um post sem hipótese não está pronto.</strong> Não é campo opcional.</p>
+<h2>Etapa 5 — GATE</h2>
+<p>Antes de entregar, rode o checklist de <code>reference/04-gate-revisao.md</code>. Ele é bloqueante: qualquer
+item reprovado volta para a Etapa 4. O gate pega o que a escrita isolada não enxerga — repetição
+com meses anteriores, mix desequilibrado, política comercial não confirmada, dependência de produção
+não sinalizada, post sem hipótese.</p>
+<p>Registre no fim da pauta o que o gate reprovou e como foi corrigido. Isso é o rastro que prova que
+o processo rodou, e não que alguém acertou de primeira.</p>
+<h2>Etapa 6 — LEITURA (fim do mês)</h2>
+<p>Quando as métricas chegarem, confronte cada hipótese com o resultado e classifique:</p>
+<ul>
+<li><strong>Confirmada</strong> → o ângulo entra na lista de apostas seguras da memória.</li>
+<li><strong>Refutada</strong> → aplique a linha <code>Se falhar</code> que já estava escrita. O próximo teste já está definido;
+  não é preciso inventar explicação depois do fato.</li>
+<li><strong>Inconclusiva</strong> → distribuição/alcance atrapalhou a leitura. Repita o teste antes de descartar o ângulo.</li>
+</ul>
+<p>Escreva o resultado em <code>[Cliente]/pautas/_memoria.md</code>. É esse arquivo que a Etapa 1 do mês seguinte
+vai ler. O ciclo fecha aqui. Procedimento em <code>reference/05-leitura-mensal.md</code>.</p>
+<hr />
+<h2>Princípios</h2>
+<p><strong>Não invente informação.</strong> Estoque, produto, prazo, frete, garantia, política comercial, nome de
+cliente atendido — se não está no dossiê ou no CLAUDE.md, ou você omite ou marca como pendência
+explícita. Nunca preencha por plausibilidade.</p>
+<p><strong>Alinhamento recente vence documento antigo.</strong> Um dossiê de maio pode estar errado se houve
+check-in em julho.</p>
+<p><strong>Prefira o post autônomo, sem sacrificar a estratégia.</strong> Reduzir dependência do cliente é bom até o
+ponto em que começa a abandonar formatos que a estratégia prioriza. Se o cliente investiu em vídeo
+para reverter queda de alcance, não elimine todos os Reels em nome da conveniência — equilibre.</p>
+<p><strong>Hipótese errada documentada vale mais que post bom sem hipótese.</strong> O primeiro produz aprendizado
+transferível para o próximo mês e para outras contas. O segundo produz um número que ninguém sabe
+explicar.</p></div><div class="foot"><a href="https://github.com/emillymiranda-maker/pauta-engine/blob/main/skill/SKILL.md">Ver o arquivo original (skill/SKILL.md) no GitHub &rarr;</a></div></body></html>

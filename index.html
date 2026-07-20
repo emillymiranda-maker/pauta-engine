@@ -51,9 +51,25 @@
   a.tile span{color:var(--dim);font-size:13px}
   footer{color:var(--dim);font-size:13px;border-top:1px solid var(--line);padding-top:24px;
     margin-top:10px}
+  .nav{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.92);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .navin{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;flex-wrap:wrap;
+    gap:6px;align-items:center}
+  .navin .brand{font-weight:700;font-size:14px;margin-right:14px;white-space:nowrap}
+  .navin a{color:var(--dim);text-decoration:none;font-size:13.5px;padding:6px 11px;
+    border-radius:8px;white-space:nowrap}
+  .navin a:hover{color:var(--txt);background:var(--panel2)}
+  .navin a.on{color:var(--txt);background:var(--panel2);border:1px solid var(--line)}
+  @media(max-width:640px){.wrap{padding:30px 18px 60px}.navin{padding:12px 18px}}
 </style>
 </head>
 <body>
+<div class="nav"><div class="navin"><span class="brand">Pauta Engine</span>
+<a href="index.html" class="on">Fluxograma</a><a href="blueprint.html">Blueprint</a>
+<a href="skill.html">Workflow</a><a href="referencias.html">Referências</a>
+<a href="caso-contexto.html">Caso · Intake</a><a href="caso-memoria.html">Caso · Memória</a>
+<a href="caso-pauta.html">Caso · Pauta</a><a href="caso-loop.html">Caso · Aprendizado</a>
+</div></div>
 <div class="wrap">
 
   <p class="eyebrow">Quest Q-2026-002 · V4-79</p>
@@ -427,14 +443,22 @@
   <div class="card">
     <h2>Repositório</h2>
     <div class="links">
-      <a class="tile" href="skill/SKILL.md"><b>Workflow executável</b>
-        <span>A skill instalável — as 6 etapas e as 5 referências</span></a>
-      <a class="tile" href="caso/02-pauta-agosto.md"><b>Evidência de output real</b>
+      <a class="tile" href="skill.html"><b>Workflow executável</b>
+        <span>A skill instalável — 6 etapas e 8 sub-passos do briefing</span></a>
+      <a class="tile" href="caso-pauta.html"><b>Evidência de output real</b>
         <span>Pauta de 8 posts com copy final, hipóteses e registro do gate</span></a>
-      <a class="tile" href="caso/03-leitura-e-loop.md"><b>O ciclo de aprendizado</b>
+      <a class="tile" href="caso-loop.html"><b>O ciclo de aprendizado</b>
         <span>Leitura executada e consequências pré-comprometidas</span></a>
-      <a class="tile" href="README.md"><b>Blueprint completo</b>
+      <a class="tile" href="referencias.html"><b>Referências do workflow</b>
+        <span>Intake, briefing, hipótese, gate, leitura, assunto, ecossistema</span></a>
+      <a class="tile" href="caso-contexto.html"><b>Caso · Intake</b>
+        <span>O contexto verificado que alimenta o motor</span></a>
+      <a class="tile" href="caso-memoria.html"><b>Caso · Memória</b>
+        <span>Temas queimados e reserva de ângulos</span></a>
+      <a class="tile" href="blueprint.html"><b>Blueprint completo</b>
         <span>Tese, ciclo, caso e limitações conhecidas</span></a>
+      <a class="tile" href="https://github.com/emillymiranda-maker/pauta-engine"><b>Repositório no GitHub</b>
+        <span>Baixar a skill e instalar em outro workspace</span></a>
     </div>
   </div>
 

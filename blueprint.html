@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blueprint completo — Pauta Engine</title><style>
+:root{--bg:#0b0b0c;--panel:#141416;--panel2:#1a1a1d;--line:#2a2a2f;
+ --red:#c0392b;--red-soft:#e05a4a;--txt:#f2f2f3;--dim:#8b8b93}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.65;
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+ -webkit-font-smoothing:antialiased}
+.nav{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.92);
+ backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{max-width:1000px;margin:0 auto;padding:14px 28px;display:flex;flex-wrap:wrap;
+ gap:6px;align-items:center}
+.navin .brand{font-weight:700;font-size:14px;margin-right:14px;white-space:nowrap}
+.navin a{color:var(--dim);text-decoration:none;font-size:13.5px;padding:6px 11px;
+ border-radius:8px;white-space:nowrap}
+.navin a:hover{color:var(--txt);background:var(--panel2)}
+.navin a.on{color:var(--txt);background:var(--panel2);border:1px solid var(--line)}
+.wrap{max-width:1000px;margin:0 auto;padding:44px 28px 90px}
+.eyebrow{color:var(--red-soft);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+ font-weight:700;margin:0 0 12px}
+h1{font-size:clamp(28px,4.6vw,42px);line-height:1.12;letter-spacing:-.02em;margin:0 0 26px}
+h2{font-size:23px;letter-spacing:-.01em;margin:52px 0 14px;padding-top:22px;
+ border-top:1px solid var(--line)}
+h3{font-size:17.5px;margin:34px 0 10px;color:var(--txt)}
+h4{font-size:15px;margin:24px 0 8px;color:var(--red-soft)}
+p{margin:0 0 16px}
+a{color:var(--red-soft)}
+strong{color:#fff}
+ul,ol{margin:0 0 18px;padding-left:22px}
+li{margin-bottom:7px}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0}
+blockquote{margin:22px 0;padding:16px 20px;background:var(--panel);
+ border-left:3px solid var(--red);border-radius:0 12px 12px 0;color:#c9c9d1}
+blockquote p:last-child{margin-bottom:0}
+code{background:var(--panel2);border:1px solid var(--line);border-radius:6px;
+ padding:2px 6px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+ color:#e8b4ad}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+ padding:18px 20px;overflow-x:auto;margin:0 0 20px}
+pre code{background:none;border:0;padding:0;color:#c9c9d1;font-size:12.5px;line-height:1.6}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:0 0 24px;display:block;
+ overflow-x:auto}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);
+ vertical-align:top}
+th{color:var(--red-soft);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+ font-weight:700;white-space:nowrap}
+tbody tr:hover{background:var(--panel)}
+.foot{max-width:1000px;margin:0 auto;padding:0 28px 70px}
+.foot a{display:inline-block;border:1px solid var(--line);background:var(--panel2);
+ border-radius:10px;padding:11px 18px;text-decoration:none;color:var(--txt);font-size:14px}
+.foot a:hover{border-color:var(--red)}
+@media(max-width:640px){.wrap{padding:30px 18px 60px}.navin{padding:12px 18px}}
+</style></head>
+<body><div class="nav"><div class="navin"><span class="brand">Pauta Engine</span><a href="index.html">Fluxograma</a><a href="blueprint.html" class="on">Blueprint</a><a href="skill.html">Workflow</a><a href="referencias.html">Referências</a><a href="caso-contexto.html">Caso · Intake</a><a href="caso-memoria.html">Caso · Memória</a><a href="caso-pauta.html">Caso · Pauta</a><a href="caso-loop.html">Caso · Aprendizado</a></div></div>
+<div class="wrap"><p class="eyebrow">Tese, ciclo, caso e limitações</p><h1>Blueprint completo</h1>
+
+<p><strong>Como transformar contexto, objetivos e repertório do cliente em uma pauta mensal que já nasce
+pronta para execução e para aprendizado.</strong></p>
+<p>Entrega para a quest Q-2026-002 · V4-79 — <em>Pauta de social media</em>.</p>
+<p>🔗 <strong><a href="https://emillymiranda-maker.github.io/pauta-engine/">Fluxograma do processo</a></strong>
+📁 <strong><a href="skill/SKILL.md">Workflow executável (a skill)</a></strong>
+📄 <strong><a href="caso/02-pauta-agosto.md">Evidência de output real</a></strong></p>
+<hr />
+<h2>O problema</h2>
+<p>Pauta de social media é quase sempre um dos dois extremos: uma lista de temas que o design não
+consegue produzir sem perguntar, ou um calendário bonito que ninguém sabe explicar depois — quando
+o mês vai bem, inventa-se uma razão; quando vai mal, culpa-se o algoritmo. Nos dois casos o mês
+seguinte não aprende nada.</p>
+<p>E há um terceiro problema, mais silencioso: a pauta boa costuma depender de quem a escreve. O
+processo existe na cabeça de uma pessoa. Quando ela sai de férias, a qualidade cai — o que prova
+que nunca houve processo, só repertório.</p>
+<h2>A tese</h2>
+<p>A qualidade de uma pauta não vem da criatividade de quem escreve. Vem de <strong>quatro insumos
+estruturados</strong> — contexto, memória, distribuição e hipótese — e de <strong>um gate que roda antes da
+produção</strong>. A criatividade opera dentro desse esqueleto, não no lugar dele.</p>
+<p>Disso saem duas propriedades que a maioria dos processos de pauta não tem:</p>
+<p><strong>Executável sem o autor.</strong> O repertório vira arquivo. A memória de temas é contada, não lembrada.
+Um substituto abre quatro arquivos e produz o mês.</p>
+<p><strong>Falseável.</strong> Cada post carrega uma hipótese de engajamento com métrica declarada <strong>antes</strong> de
+publicar, e uma leitura pré-comprometida do fracasso. Post ruim vira dado em vez de ruído.</p>
+<hr />
+<h2>O ciclo</h2>
+<pre><code>[1] INTAKE  →  [2] MEMÓRIA  →  [3] DISTRIBUIÇÃO  →  [4] BRIEFING+HIPÓTESE  →  [5] GATE  →  produção
+                    ↑                                                                          │
+                    └──────────────────────  [6] LEITURA  ←───────────────────────────────────┘
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Etapa</th>
+<th>Entrada</th>
+<th>Saída</th>
+<th>Decisão humana</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Intake</strong></td>
+<td>Dossiê, linha editorial, alinhamentos datados</td>
+<td>Contexto verificado</td>
+<td>Aceitar lacuna ou parar e perguntar ao cliente</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Memória</strong></td>
+<td>Pautas anteriores, vereditos, reserva de ângulos</td>
+<td>Lista de temas queimados e territórios livres</td>
+<td>Autorizar repetição de tema quando o dado justificar</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Distribuição</strong></td>
+<td>Contrato, pilares, funil, capacidade de produção</td>
+<td>Estrutura do mês, antes de qualquer tema</td>
+<td>Aceitar o nível de dependência do cliente</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Briefing + hipótese</strong></td>
+<td>Estrutura + contexto</td>
+<td>8–12 posts com copy final e hipótese</td>
+<td>Escrita, ângulo, escolha da métrica</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Gate</strong></td>
+<td>Pauta completa</td>
+<td>Aprovação ou devolução</td>
+<td>Julgar exceção legítima vs. desvio</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Leitura</strong></td>
+<td>Métricas do mês</td>
+<td>Vereditos + mudança de distribuição</td>
+<td>Distinguir refutada de inconclusiva</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A etapa 6 é a que fecha o circuito.</strong> Sem ela o sistema entrega execução mas não aprendizado, e a
+pauta do mês 7 é a do mês 1 com sinônimos.</p>
+<hr />
+<h2>Dentro da etapa 4 — como um post é construído</h2>
+<p>A etapa mais longa do ciclo tem oito sub-passos. Percorrê-los fora de ordem é o que produz post
+bonito que não serve ao slot que deveria ocupar.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Sub-passo</th>
+<th>O que decide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>Herdar o slot</td>
+<td>Pilar, funil e formato-alvo já vêm da etapa 3 — escrever é preencher, não escolher</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td><strong>Selecionar o assunto</strong></td>
+<td>5 fontes ordenadas, 4 filtros bloqueantes</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>Formato pelo argumento</td>
+<td>A forma do raciocínio decide, não a estética</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td>Hook</td>
+<td>Abre por problema, norma ou dado — nunca institucional</td>
+</tr>
+<tr>
+<td>4.5</td>
+<td>Corpo</td>
+<td>Um passo por slide; timecodes no Reels</td>
+</tr>
+<tr>
+<td>4.6</td>
+<td>CTA + hashtags</td>
+<td>CTA no padrão vigente; exatamente 5 tags</td>
+</tr>
+<tr>
+<td>4.7</td>
+<td>Direção de produção</td>
+<td>IA ou gravação, e o que <strong>não</strong> pode ser gerado</td>
+</tr>
+<tr>
+<td>4.8</td>
+<td>Hipótese</td>
+<td>As três linhas, antes de publicar</td>
+</tr>
+</tbody>
+</table>
+<h3>A seleção de assunto (4.2)</h3>
+<p>É a pergunta mais decisiva do processo e a que mais costuma ser respondida por intuição — motivo
+pelo qual a pauta acaba dependendo de quem escreve. Aqui o assunto <strong>não é escolhido, é derivado</strong>.</p>
+<p><strong>5 fontes, em ordem de prioridade:</strong> (1) reserva de ângulos exclusivos do dossiê · (2) dor da
+persona do slot + vocabulário literal · (3) alinhamento recente · (4) território de portfólio nunca
+coberto · (5) benchmark do nicho.</p>
+<p><strong>4 filtros bloqueantes:</strong> (1) memória de temas — repetiu nos últimos 3 meses? bloqueado ·
+(2) hooks saturados · (3) fronteira do afirmável · (4) produto já protagonista neste mês.</p>
+<p>Se nenhuma fonte serve ao slot, <strong>o slot troca de pilar</strong> — nunca se inventa assunto para preencher
+calendário. É assim que nasce o post genérico que não serve a ninguém.</p>
+<p>Detalhamento: <a href="skill/reference/06-selecao-de-assunto.md"><code>skill/reference/06-selecao-de-assunto.md</code></a></p>
+<hr />
+<h2>Ecossistema de skills</h2>
+<p>O Pauta Engine é o motor central de nove skills construídas para a operação. A saída de uma é a
+entrada da próxima, e todas escrevem nos mesmos arquivos do cliente.</p>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Etapa</th>
+<th>O que resolve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboarding-cliente</code></td>
+<td>0</td>
+<td>Estrutura do cliente novo a partir do kick-off — evita o dossiê incompleto, causa raiz de pauta fraca</td>
+</tr>
+<tr>
+<td><code>alinhamento-cliente</code></td>
+<td>alimenta 1 e 2</td>
+<td>Registra alinhamentos de reunião no contexto — torna verificável a regra "alinhamento recente vence documento antigo"</td>
+</tr>
+<tr>
+<td><code>social-media-maestro</code></td>
+<td>1 e 3</td>
+<td>Pesquisa, linha editorial, pilares e distribuição de funil</td>
+</tr>
+<tr>
+<td><code>copy-maestro</code></td>
+<td>4.2 e 4.4</td>
+<td>Persona, jornada, consciência, dores e objeções — ancora ângulo e hook</td>
+</tr>
+<tr>
+<td><strong><code>pauta-engine</code></strong></td>
+<td><strong>3, 4 e 5</strong></td>
+<td><strong>O motor: distribuição, seleção de assunto, briefing, hipótese e gate</strong></td>
+</tr>
+<tr>
+<td><code>roteirista-cinema-video</code></td>
+<td>4.5 e 4.7</td>
+<td>Roteiro de Reels em prompt de vídeo, com consistência entre cenas</td>
+</tr>
+<tr>
+<td><code>image-prompt-generator</code></td>
+<td>4.7</td>
+<td>Direcionamento visual do briefing → prompt estruturado</td>
+</tr>
+<tr>
+<td><code>revisor-pauta</code></td>
+<td>5</td>
+<td>Segunda camada: coerência, mix, funil, repetição, viabilidade</td>
+</tr>
+<tr>
+<td><code>analisador-metricas</code></td>
+<td>6</td>
+<td>Lê métricas, correlaciona conteúdo com resultado <strong>e grava os achados de volta no contexto</strong></td>
+</tr>
+</tbody>
+</table>
+<p>O ponto de fechamento é o <code>analisador-metricas</code>: ele não só produz o relatório do mês, ele escreve
+os achados de volta no contexto do cliente. Sem isso, a etapa 6 geraria um PDF bonito que ninguém
+lê na hora de montar o mês seguinte — que é o destino da maioria dos relatórios de performance.</p>
+<p>O motor funciona sozinho, com os arquivos de contexto preenchidos à mão. As demais são aceleradores
+de etapa, não dependências.</p>
+<p>Detalhamento: <a href="skill/reference/07-ecossistema-de-skills.md"><code>skill/reference/07-ecossistema-de-skills.md</code></a></p>
+<hr />
+<h2>A peça central: hipótese de engajamento</h2>
+<p>Cada post recebe três linhas obrigatórias, escritas antes de publicar:</p>
+<pre><code>Hipótese: [quem] vai [ação observável] porque [razão ancorada em dor documentada]
+Métrica de leitura: [uma métrica] (referência: [número anterior] ou [primeira medição])
+Se falhar: [interpretação pré-comprometida] → [próximo teste]
+</code></pre>
+<p>A terceira linha é a que quase todo mundo pula, e é a que faz o sistema funcionar. Escrita depois
+do resultado, ela é racionalização. Escrita antes, ela é o plano de setembro já decidido.</p>
+<p>E ela precisa separar as duas causas possíveis de fracasso — <strong>o tema não interessa</strong> ou <strong>o formato
+não serviu ao tema</strong> — porque as correções são opostas. Trocar uma quando o problema era a outra
+queima mais um mês.</p>
+<p>Regras completas: <a href="skill/reference/03-hipotese-engajamento.md"><code>skill/reference/03-hipotese-engajamento.md</code></a></p>
+<hr />
+<h2>O caso</h2>
+<p>Conta B2B industrial, nicho de conformidade sanitária, <strong>partindo do zero absoluto</strong>: sem audiência
+herdada, sem histórico de conteúdo, sem acervo de material. Cliente anonimizado sob o alias
+Vedaplan.</p>
+<p>O ponto de partida importa mais que o resultado. Não havia repertório prévio — do cliente nem do
+operador — que pudesse explicar a performance. O que sobra é o processo.</p>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Arquivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — Intake</td>
+<td><a href="caso/00-contexto.md"><code>caso/00-contexto.md</code></a></td>
+</tr>
+<tr>
+<td>2 — Memória</td>
+<td><a href="caso/01-memoria.md"><code>caso/01-memoria.md</code></a></td>
+</tr>
+<tr>
+<td>3, 4 e 5 — Pauta completa + gate</td>
+<td><a href="caso/02-pauta-agosto.md"><code>caso/02-pauta-agosto.md</code></a></td>
+</tr>
+<tr>
+<td>6 — Leitura e loop</td>
+<td><a href="caso/03-leitura-e-loop.md"><code>caso/03-leitura-e-loop.md</code></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Primeiro mês completo:</strong> views +541%, alcance +654%, 91 toques no botão de orçamento.</p>
+<p><strong>Pauta de agosto:</strong> 8 posts com copy final · 3 ângulos exclusivos estreados · 5 reprovações do gate
+registradas com correção · <strong>0 de 8 posts dependem de ação do cliente</strong> · 8 de 8 com hipótese.</p>
+<hr />
+<h2>Como outra pessoa repete isto</h2>
+<ol>
+<li>Copie <code>skill/</code> para <code>.claude/skills/pauta-engine/</code> no seu workspace</li>
+<li>Garanta que o cliente tem <code>CLAUDE.md</code>, <code>01_dossie.md</code> e <code>02_linha_editorial.md</code> preenchidos —
+   o gabarito do que precisa estar respondido está em
+   <a href="skill/reference/01-intake.md"><code>skill/reference/01-intake.md</code></a></li>
+<li>Crie <code>[Cliente]/pautas/_memoria.md</code> (modelo: <a href="caso/01-memoria.md"><code>caso/01-memoria.md</code></a>)</li>
+<li>Peça: <em>"monta a pauta de [cliente] para [mês]"</em></li>
+<li>No fim do mês, com as métricas em mãos: <em>"lê os resultados de [mês]"</em></li>
+</ol>
+<p>Sem os arquivos do passo 2, o sistema <strong>para e pergunta</strong> em vez de inventar contexto. Esse
+comportamento é intencional: pauta construída sobre suposição é o erro mais caro do processo,
+porque só aparece na aprovação do cliente.</p>
+<hr />
+<h2>Limitações conhecidas</h2>
+<ul>
+<li><strong>A etapa 6 nunca rodou com dados de agosto.</strong> As consequências de setembro estão
+  pré-comprometidas por escrito, mas o ciclo completo ainda não fechou uma volta inteira com este
+  formato de hipótese. Isso é declarado no próprio caso.</li>
+<li><strong>A hipótese depende de referência.</strong> No primeiro mês de uma conta não há número anterior; o post
+  vira linha de base. O sistema funciona, mas só produz veredito a partir do segundo mês.</li>
+<li><strong>Métricas entram à mão.</strong> A leitura mensal ainda é alimentada por exportação do Meta Business
+  Suite, não por API. Automatizar isso é o próximo passo óbvio.</li>
+<li><strong>O gate é uma checagem assistida, não um teste automatizado.</strong> Ele não roda sozinho em CI — é uma
+  lista bloqueante que um humano ou o agente percorre.</li>
+<li><strong>Não cobre distribuição paga.</strong> Se o alcance vem de impulsionamento, a hipótese fica
+  inconclusiva por construção — o sistema sabe disso e classifica assim, mas não separa orgânico de
+  pago automaticamente.</li>
+<li><strong>Validado em profundidade numa conta B2B industrial.</strong> O esqueleto foi aplicado em outras contas
+  da carteira, mas o caso documentado aqui é um só.</li>
+</ul></div><div class="foot"><a href="https://github.com/emillymiranda-maker/pauta-engine/blob/main/README.md">Ver o arquivo original (README.md) no GitHub &rarr;</a></div></body></html>
